@@ -2,6 +2,7 @@ var canvas,backgroundImage;
 var voterCount=0;
 var database;
 var form,im;
+
 var state=0;
 database=firebase.database();
 

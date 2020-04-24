@@ -36,7 +36,8 @@ class Form{
         txt3.position(500,340);
         input.position(600,250);
         input2.position(600,300); 
-        input3.position(600,350);                   
+        input3.position(600,350);      
+        var i=0;             
         button.position(600,400);
     }
                   
@@ -44,12 +45,20 @@ class Form{
             input.hide();
             input2.hide();
             input3.hide();
-            button.hide();
-            var name=input.value();
-         var voteCount=database.ref('voteCount');
-           database.ref('voteCount').set(1); 
-           database.ref().push('voter'+voteCount);
-           
+            button.hide();                                             
+                                  
+            var name=input.value();            
+         var voterCount=database.ref('voterCount');
+         var voterName = database.ref('newVoter/Name');
+         var voterClass = database.ref('newVoter/Class');
+         var voterEmail = database.ref('newVoter/Email id');
+        
+       
+         i=i+1;
+           voterCount.set(i);                                    
+            voterName.set(input.value());
+            voterClass.set(input3.value());
+            voterEmail.set(input2.value());
             state=1;
            var im= createImg("zen.jpg");
            im.position(400,0);
