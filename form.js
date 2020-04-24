@@ -11,7 +11,7 @@ class Form{
           
      var title=createElement('h1');
         title.html("The Students' Survey");
-        title.position(100,0);
+        title.position(540,0);
         
        
         
@@ -61,11 +61,11 @@ class Form{
             voterEmail.set(input2.value());
             state=1;
            var im= createImg("zen.jpg");
-           im.position(400,0);
+           im.position(400,100);
             greeting.html("Hello "+name);
-            greeting.position(400,500)
+            greeting.position(400,400)
             greeting2.html("Welcome to the Students' Survey, "+name);
-            greeting2.position(400,550)
+            greeting2.position(400,450)
            
         });
         
