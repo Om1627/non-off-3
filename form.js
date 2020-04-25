@@ -21,8 +21,7 @@ class Form{
         var button = createButton('Start');
         button.size(200,50)
 
-        var greeting= createElement('h3');
-        var greeting2= createElement('h3');
+        
 
         var txt1 = createElement("h3");
         var txt2 = createElement("h3");
@@ -42,8 +41,17 @@ class Form{
     }
                                                                                          
         button.mousePressed(function (){     
-                         
+                       
+            var survey= new Survey();  
+         survey.display(); 
+         var name=input.value(); 
+         var greeting= createElement('h3');
+        var greeting2= createElement('h3');
+         greeting.html("Hello "+name);
+         greeting.position(400,400)
 
+         greeting2.html("Welcome to the Students' Survey, "+name);
+         greeting2.position(400,450)
          state=1;
          input.hide();              
          input2.hide();           
@@ -51,7 +59,7 @@ class Form{
          button.hide();                                                                
          resizeCanvas(200,3500,true);   
 
-         var name=input.value();            
+                    
          var voterCount=database.ref('voterCount');
          var voterName = database.ref('newVoter/Name');
          var voterClass = database.ref('newVoter/Class');
@@ -73,14 +81,9 @@ class Form{
          var im= createImg("zen.jpg");
          im.position(400,100);
 
-         greeting.html("Hello "+name);
-         greeting.position(400,400)
+       
 
-         greeting2.html("Welcome to the Students' Survey, "+name);
-         greeting2.position(400,450)
-
-        var survey= new Survey();  
-         survey.display();  
+         
         });
         
     }

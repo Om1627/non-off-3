@@ -3,6 +3,18 @@ class Survey {
 
     }
     display(){
+   
+      var imag= createImg("bg.png");
+      imag.position(147,0);
+      imag.size(1200,3500);
+
+      var tile=createElement('h1');
+        tile.html("The Students' Survey");
+        tile.position(540,0);
+
+
+       
+      
         var q1 = createElement("h3");
         var q2 = createElement("h3");
         var q3 = createElement("h3");
@@ -13,7 +25,8 @@ class Survey {
         var q8 = createElement("h3");
         var q9 = createElement("h3");
         var q10 = createElement("h3");
-
+     
+      
         q1.position(300,600);
         q2.position(300,850);
         q3.position(300,1100);
@@ -28,12 +41,12 @@ class Survey {
         q1.html("Q.1 Do you agree that there should be one day in the week when we can wear free dress?")
         q2.html("Q.2 Do you agree that there should be recess time?")
         q3.html("Q.3 Do you agree that sports and extra-curricular activities should be expanded? ")
-        q4.html("Q.4 Do you agree that mobile phone should be allowed in school?")
+        q4.html("Q.4 Do you agree that all taps in school should work and clean and sufficient amount of glasses should be available?")
         q5.html("Q.5 Do you agree that sports equipment should be improved?")
         q6.html("Q.6 Should students participate in events only if they want to?")
         q7.html("Q.7 Should Air Coditioners be installed in classrooms?")
         q8.html("Q.8 Should Gujarati be teached from first standard?")
-        q9.html("Q.9 Should teachers equally support boys and girls?")
+        q9.html("Q.9 Are boys and girls equally supported by all teachers?")
         q10.html("Q.10 Should soaps be placed in all washrooms?")
 
         var q1y = createButton("Yes");
@@ -67,7 +80,7 @@ class Survey {
         q7y.position(300,2225);
        q8y.position(300,2475);
        q9y.position(300,2725);
-        q10y.position(300,2975);
+        q10y.position(300,2950);
 
         q1n.position(300,750);
        q2n.position(300,1000);
