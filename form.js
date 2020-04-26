@@ -17,9 +17,10 @@ class Form{
         var  input2=createInput("",text); 
         var  input3=createInput("",Number); 
         
-        
-        var button = createButton('Start');
-        button.size(200,50)
+       var button = createButton('Start');
+       button.size(200,50);
+        button.position(600,400);
+       
 
         
 
@@ -37,16 +38,20 @@ class Form{
         input.position(600,250);
         input2.position(600,300); 
         input3.position(600,350);      
-        button.position(600,400);
+      
     }
                                                                                          
         button.mousePressed(function (){     
                        
-            var survey= new Survey();  
+         var survey= new Survey();  
          survey.display(); 
-         var name=input.value(); 
+        
+        state=1;
+
+         var name=input.value();
+
          var greeting= createElement('h3');
-        var greeting2= createElement('h3');
+         var greeting2= createElement('h3');
          greeting.html("Hello "+name);
          greeting.position(400,400)
 
@@ -59,7 +64,7 @@ class Form{
          button.hide();                                                                
          resizeCanvas(200,3500,true);   
 
-                    
+                  
          var voterCount=database.ref('voterCount');
          var voterName = database.ref('newVoter/Name');
          var voterClass = database.ref('newVoter/Class');
@@ -70,9 +75,7 @@ class Form{
          newVoter.push("class").set(input2.value())
          newVoter.push("email id").set(input3.value()) 
 
-         i=i+1;
-         console.log(i); 
-         voterCount.set(i);   
+          
 
          voterName.set(input.value());
          voterClass.set(input3.value());

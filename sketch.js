@@ -4,12 +4,16 @@ var database;
 var form,im;
 var i=0;
 var state=0;
+
 var qn1,qn2,qn3,qn4,qn5,qn6,qn7,qn8,qn9,qn10;
 database=firebase.database();
 
 function setup(){
  
 createCanvas(1200,800);
+
+
+
 qn1=database.ref("Question1");
 qn2=database.ref("Question2");
 qn3=database.ref("Question3");

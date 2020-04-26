@@ -4,13 +4,13 @@ class Survey {
     }
     display(){
    
-      var imag= createImg("bg.png");
-      imag.position(147,0);
-      imag.size(1200,3500);
+       var imag= createImg("bg.png");
+       imag.position(147,0);
+       imag.size(1200,3500);
 
-      var tile=createElement('h1');
-        tile.html("The Students' Survey");
-        tile.position(540,0);
+       var tile=createElement('h1');
+       tile.html("The Students' Survey");
+       tile.position(540,0);
 
 
        
@@ -69,29 +69,56 @@ class Survey {
         var q7n = createButton("No");
         var q8n =createButton("No");
         var q9n = createButton("No");
-        
+        var q10n = createButton("No");
 
-       q1y.position(300,725);
-       q2y.position(300,975);
-       q3y.position(300,1225);
-       q4y.position(300,1475);
+        q1y.position(300,725);
+        q2y.position(300,975);
+        q3y.position(300,1225);
+        q4y.position(300,1475);
         q5y.position(300,1725);
-       q6y.position(300,1975);
+        q6y.position(300,1975);
         q7y.position(300,2225);
-       q8y.position(300,2475);
-       q9y.position(300,2725);
+        q8y.position(300,2475);
+        q9y.position(300,2725);
         q10y.position(300,2950);
 
-        q1n.position(300,750);
-       q2n.position(300,1000);
-        q3n.position(300,1250);
-       q4n.position(300,1500);
-       q5n.position(300,1750);
-      q6n.position(300,2000);
-       q7n.position(300,2250);
-       q8n.position(300,2500);
-        q9n.position(300,2750);
-       
+        q1n.position(400,725);
+        q2n.position(400,975);
+        q3n.position(400,1225);
+        q4n.position(400,1475);
+        q5n.position(400,1725);
+        q6n.position(400,1975);
+        q7n.position(400,2225);
+        q8n.position(400,2475);
+        q9n.position(400,2725);
+        q10n.position(400,2950);
+
+        q1y.size(100,50);
+        q2y.size(100,50);
+        q3y.size(100,50);
+        q4y.size(100,50);
+        q5y.size(100,50);
+        q6y.size(100,50);
+        q7y.size(100,50);
+        q8y.size(100,50);
+        q9y.size(100,50);
+        q10y.size(100,50);
+
+        q1n.size(100,50);
+        q2n.size(100,50);
+        q3n.size(100,50);
+        q4n.size(100,50);
+        q5n.size(100,50);
+        q6n.size(100,50);
+        q7n.size(100,50);
+        q8n.size(100,50);
+        q9n.size(100,50);
+        q10n.size(100,50);
+
+
+
+
+
         q1y.mousePressed(function(){
            qn1.push("yes") 
         })
@@ -122,25 +149,28 @@ class Survey {
          q10y.mousePressed(function(){
             qn10.push("yes") 
          })
+
+
+         
          q1n.mousePressed(function(){
             qn1.push("no") 
          })
          q2n.mousePressed(function(){
             qn2.push("no") 
          })
-         q3y.mousePressed(function(){
+         q3n.mousePressed(function(){
             qn3.push("no") 
          })
-         q4y.mousePressed(function(){
+         q4n.mousePressed(function(){
             qn4.push("no") 
          })
-         q5y.mousePressed(function(){
+         q5n.mousePressed(function(){
             qn5.push("no") 
          })
-         q6y.mousePressed(function(){
+         q6n.mousePressed(function(){
             qn6.push("no") 
          })
-         q7y.mousePressed(function(){
+         q7n.mousePressed(function(){
             qn7.push("no") 
          })
          q8n.mousePressed(function(){
@@ -150,5 +180,8 @@ class Survey {
             qn9.push("no") 
          })
         
+         q10n.mousePressed(function(){
+            qn10.push("no") 
+         })
     }
 }
