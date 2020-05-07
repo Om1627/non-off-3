@@ -4,6 +4,9 @@ class Survey {
     }
     display(){
    
+      alert("The other choice to the respective question will disappear after you select one choice") 
+
+
        var imag= createImg("bg.png");
        imag.position(147,0);
        imag.size(1200,3500);
@@ -13,8 +16,14 @@ class Survey {
        tile.position(540,0);
 
 
-       
       
+
+      
+      ////  submit.position(300,3300);
+     //   submit.mousePressed(function(){
+    //   state=3;
+    //    })
+
         var q1 = createElement("h3");
         var q2 = createElement("h3");
         var q3 = createElement("h3");
@@ -44,11 +53,11 @@ class Survey {
         q4.html("Q.4 Do you agree that all taps in school should work and clean and sufficient amount of glasses should be available?")
         q5.html("Q.5 Do you agree that sports equipment should be improved?")
         q6.html("Q.6 Should students participate in events only if they want to?")
-        q7.html("Q.7 Should Air Coditioners be installed in classrooms?")
+        q7.html("Q.7 Should Air Conditioners be installed in classrooms?")
         q8.html("Q.8 Should Gujarati be teached from first standard?")
         q9.html("Q.9 Are boys and girls equally supported by all teachers?")
         q10.html("Q.10 Should soaps be placed in all washrooms?")
-
+        
         var q1y = createButton("Yes");
         var q2y = createButton("Yes");
         var q3y = createButton("Yes");
@@ -59,7 +68,7 @@ class Survey {
         var q8y = createButton("Yes");
         var q9y = createButton("Yes");
         var q10y = createButton("Yes");
-
+   
         var q1n = createButton("No");
         var q2n = createButton("No");
         var q3n = createButton("No");
@@ -121,67 +130,107 @@ class Survey {
 
         q1y.mousePressed(function(){
            qn1.push("yes") 
+           q1y.hide();
+           q1n.hide();
         })
         q2y.mousePressed(function(){
             qn2.push("yes") 
+            q2y.hide();
+            q2n.hide();
          })
          q3y.mousePressed(function(){
-            qn3.push("yes") 
+            qn3.push("yes");
+            q3y.hide();
+            q3n.hide(); 
          })
          q4y.mousePressed(function(){
             qn4.push("yes") 
+            q4y.hide();
+            q4n.hide();
          })
          q5y.mousePressed(function(){
             qn5.push("yes") 
+            q5y.hide();
+            q5n.hide();
          })
          q6y.mousePressed(function(){
-            qn6.push("yes") 
+            qn6.push("yes")
+            q6y.hide();
+            q6n.hide(); 
          })
          q7y.mousePressed(function(){
             qn7.push("yes") 
+            q7y.hide();
+            q7n.hide();
          })
          q8y.mousePressed(function(){
-            qn8.push("yes") 
+            qn8.push("yes")
+            q8y.hide();
+            q8n.hide(); 
          })
          q9y.mousePressed(function(){
             qn9.push("yes") 
+            q9y.hide();
+            q9n.hide();
          })
          q10y.mousePressed(function(){
             qn10.push("yes") 
+            q10y.hide();
+            q10n.hide();
          })
 
 
          
          q1n.mousePressed(function(){
             qn1.push("no") 
+            q1y.hide();
+            q1n.hide();
          })
          q2n.mousePressed(function(){
             qn2.push("no") 
+            q2y.hide();
+            q2n.hide();
          })
          q3n.mousePressed(function(){
             qn3.push("no") 
+            q3y.hide();
+            q3n.hide();
          })
          q4n.mousePressed(function(){
             qn4.push("no") 
+            q4y.hide();
+            q4n.hide();
          })
          q5n.mousePressed(function(){
             qn5.push("no") 
+            q5y.hide();
+            q5n.hide();
          })
          q6n.mousePressed(function(){
             qn6.push("no") 
+            q6y.hide();
+            q6n.hide();
          })
          q7n.mousePressed(function(){
             qn7.push("no") 
+            q7y.hide();
+            q7n.hide();
          })
          q8n.mousePressed(function(){
             qn8.push("no") 
+            q8y.hide();
+            q8n.hide();
          })
          q9n.mousePressed(function(){
             qn9.push("no") 
+            q9y.hide();
+            q9n.hide();
          })
         
          q10n.mousePressed(function(){
             qn10.push("no") 
+            q10y.hide();
+            q10n.hide();
          })
     }
 }

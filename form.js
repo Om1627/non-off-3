@@ -4,10 +4,10 @@ class Form{
     }
    
     display(){
-       if (state==0){
+       if (state!==3){
       
         resizeCanvas(200,200,true);
-       
+        counter.getCount();
           
         var title=createElement('h1');
         title.html("The Students' Survey");
@@ -17,11 +17,11 @@ class Form{
         var  input2=createInput("",text); 
         var  input3=createInput("",Number); 
         
-       var button = createButton('Start');
-       button.size(200,50);
+        var button = createButton('Start');
+        button.size(200,50);
         button.position(600,400);
        
-
+       
         
 
         var txt1 = createElement("h3");
@@ -39,14 +39,18 @@ class Form{
         input2.position(600,300); 
         input3.position(600,350);      
       
-    }
+    
                                                                                          
         button.mousePressed(function (){     
-                       
+           
+          
+            state=1;
          var survey= new Survey();  
          survey.display(); 
         
-        state=1;
+         
+         
+        
 
          var name=input.value();
 
@@ -56,16 +60,20 @@ class Form{
          greeting.position(400,400)
 
          greeting2.html("Welcome to the Students' Survey, "+name);
-         greeting2.position(400,450)
-         state=1;
+         greeting2.position(400,450);
+         
+     
+        
          input.hide();              
          input2.hide();           
          input3.hide();                                                   
          button.hide();                                                                
          resizeCanvas(200,3500,true);   
 
-                  
-         var voterCount=database.ref('voterCount');
+             
+         voterCount+=1;
+         counter.countVoter(voterCount);
+
          var voterName = database.ref('newVoter/Name');
          var voterClass = database.ref('newVoter/Class');
          var voterEmail = database.ref('newVoter/Email id');
@@ -75,6 +83,10 @@ class Form{
          newVoter.push("class").set(input2.value())
          newVoter.push("email id").set(input3.value()) 
 
+       
+        
+            
+        
           
 
          voterName.set(input.value());
@@ -89,7 +101,8 @@ class Form{
          
         });
         
-    }
+    }}
+
    
   
 }

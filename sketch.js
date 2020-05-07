@@ -1,9 +1,11 @@
 var canvas,backgroundImage;
-var voterCount=0;
+
 var database;
 var form,im;
-var i=0;
+var voterCount;
+var counter
 var state=0;
+var suggBox;
 
 var qn1,qn2,qn3,qn4,qn5,qn6,qn7,qn8,qn9,qn10;
 database=firebase.database();
@@ -24,6 +26,7 @@ qn7=database.ref("Question7");
 qn8=database.ref("Question8");
 qn9=database.ref("Question9");
 qn10=database.ref("Question10");
+counter=new Counter();
 form=new Form();
 
 }
@@ -33,6 +36,13 @@ form=new Form();
 function draw(){
   
   form.display();
+  
+    if (state===3){
+     textSize(20)
+      text("Thank you",500,500);
+    }
+  
+  
  
   
 }
